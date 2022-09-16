@@ -26,11 +26,11 @@ int main()
     for (int i = 0; i < N; ++i) 
         v[i] = i; 
 
-    shuffle(v.begin(), v.end()); 
 
     cout << "Input size : " << N << endl; 
 
     // Merge sort 
+    shuffle(v.begin(), v.end()); 
     auto start = high_resolution_clock:: now();
     merge_sort(v, 0, N - 1); 
     auto stop = high_resolution_clock:: now(); 
@@ -38,19 +38,19 @@ int main()
     cout << "Time taken by function merge sort : " 
          << duration.count() << " microseconds" << endl; 
 
-    shuffle(v.begin(), v.end()); 
 
 
     // Insertion sort 
+    shuffle(v.begin(), v.end()); 
     start = high_resolution_clock:: now(); 
     insertion_sort(v, N - 1); stop = high_resolution_clock:: now(); 
     duration = duration_cast <microseconds> (stop - start); 
     cout << "Time taken by function insertions sort : " 
          << duration.count() << " microseconds" << endl; 
 
-    shuffle(v.begin(), v.end()); 
 
     // Counting sort 
+    shuffle(v.begin(), v.end()); 
     start = high_resolution_clock::now(); 
     count_sort(v, N - 1); 
     stop = high_resolution_clock:: now(); 
@@ -58,8 +58,8 @@ int main()
     cout << "Time taken by function counting sort : " 
          << duration.count() << " microseconds" << endl; 
 
-    shuffle(v.begin(), v.end()); 
     //Quick sort 
+    shuffle(v.begin(), v.end()); 
     start = high_resolution_clock:: now(); 
     quick_sort(v, 0, N - 1); 
     stop = high_resolution_clock:: now(); 
@@ -72,7 +72,6 @@ int main()
 }
 
 
-//quick_sort ..
 void quick_sort(vector <int>& A, int low, int high) 
 {
     if (low < high)
@@ -102,7 +101,6 @@ int partition (vector <int> & A, int low, int high)
 }
 
 
-// Insertion Sort....... 
 void insertion_sort(vector <int>& A, int N) 
 {
     for (int i = 0; i < N; ++i) 
@@ -118,7 +116,6 @@ void insertion_sort(vector <int>& A, int N)
 }
 
 
-// Counting Sort .. 
 void count_sort(vector <int>& A, int N) 
 { 
     vector <int> freq (N + 1, 0); 
@@ -132,7 +129,6 @@ void count_sort(vector <int>& A, int N)
 }
 
 
-// Merge Sort .... 
 void merge_sort (vector <int>& A, int left , int right) 
 {
     if(left >= right) 
