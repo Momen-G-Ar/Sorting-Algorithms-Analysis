@@ -5,7 +5,7 @@ Summary:
     And the 4 sorting algorithms are:
         1- Merge sort.
         2- Quick sort.
-        3-  sort.
+        3- Counting sort.
         4- Insertion sort.
 
 -------------------------------------------------------------------------------------------------------------------------------
